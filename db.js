@@ -24,14 +24,32 @@ const Counter = sequelize.define("Counter", {
     defaultValue: "yan",
   },
 });
-
+const TeaInvitation = sequelize.define("TeaInvitation", {
+  name: {
+    type: DataTypes.STRING,
+    allowNull: true,
+    defaultValue: "customer",
+  },
+  contactInfo: {
+    type: DataTypes.STRING,
+    allowNull: true,
+    defaultValue: "",
+  },
+  remark: {
+    type: DataTypes.STRING,
+    allowNull: true,
+    defaultValue: "",
+  },
+});
 // 数据库初始化方法
 async function init() {
   await Counter.sync({ alter: true });
+  await TeaInvitation.sync({ alter: true });
 }
 
 // 导出初始化方法和模型
 module.exports = {
   init,
   Counter,
+  TeaInvitation,
 };
