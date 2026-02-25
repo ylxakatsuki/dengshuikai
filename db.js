@@ -18,6 +18,11 @@ const Counter = sequelize.define("Counter", {
     allowNull: false,
     defaultValue: 1,
   },
+  name: {
+    type: DataTypes.STRING,
+    allowNull: true,
+    defaultValue: "yan",
+  },
 });
 
 // 数据库初始化方法
