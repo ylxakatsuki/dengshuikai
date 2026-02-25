@@ -41,7 +41,145 @@ app.get("/api/count", async (req, res) => {
     data: result,
   });
 });
-
+app.get("/api/product", async (req, res) => {
+  res.send({
+    code: 0,
+    data: {
+      pinjian: {
+        "category": "品鉴装",
+        "spec": "2泡",
+        "products": [
+          {
+            "name": "花香肉桂",
+            "type": "1",
+            "price": 68.00
+          },
+          {
+            "name": "果香肉桂",
+            "type": "1",
+            "price": 68.00
+          },
+          {
+            "name": "燕子窠肉桂",
+            "type": "1",
+            "price": 88.00
+          },
+          {
+            "name": "虎啸岩肉桂",
+            "type": "1",
+            "price": 108.00
+          },
+          {
+            "name": "马头岩肉桂",
+            "type": "1",
+            "price": 340.00
+          },
+          {
+            "name": "竹窠肉桂",
+            "type": "2",
+            "price": 500.00
+          },
+          {
+            "name": "九龙窠肉桂",
+            "type": "2",
+            "price": 560.00
+          },
+          {
+            "name": "牛栏坑肉桂",
+            "type": "2",
+            "price": 2080.00
+          },
+          {
+            "name": "壹品五读",
+            "type": "2",
+            "price": 2280.00
+          },
+          {
+            "name": "正岩水仙",
+            "type": "1",
+            "price": 118.00
+          },
+          {
+            "name": "慧苑坑老枞",
+            "type": "2",
+            "price": 540.00
+          },
+          {
+            "name": "壹品幽兰",
+            "type": "2",
+            "price": 600.00
+          },
+          {
+            "name": "牛栏坑水仙",
+            "type": "2",
+            "price": 800.00
+          },
+          {
+            "name": "大红袍（瑞香）305",
+            "type": "1",
+            "price": 68.00
+          },
+          {
+            "name": "大红袍（黄观音）105",
+            "type": "1",
+            "price": 68.00
+          },
+          {
+            "name": "大红袍（金牡丹）220",
+            "type": "1",
+            "price": 68.00
+          }
+        ]
+      },
+    lipin:{
+      "category": "礼品装",
+      "spec": "2泡",
+      "products": [
+        {
+          "name": "燕子窠肉桂",
+          "type": "1",
+          "price": 298.00
+        },
+        {
+          "name": "虎啸岩肉桂",
+          "type": "1",
+          "price": 378.00
+        },
+        {
+          "name": "正岩水仙",
+          "type": "1",
+          "price": 398.00
+        },
+        {
+          "name": "正岩肉桂",
+          "type": "1",
+          "price": 258.00
+        },
+        {
+          "name": "纯料马肉桂",
+          "type": "1",
+          "price": 1080.00
+        },
+        {
+          "name": "竹窠肉桂",
+          "type": "1",
+          "price": 1580.00
+        },
+        {
+          "name": "慧苑坑老枞",
+          "type": "1",
+          "price": 1680.00
+        },
+        {
+          "name": "正岩大红袍",
+          "type": "1",
+          "price": 258.00
+        }
+      ]
+    }
+    }
+  });
+});
 app.post("/api/invitation", async (req, res) => {
   const { name, contactInfo, remark } = req.body;
   await TeaInvitation.create({
