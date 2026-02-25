@@ -33,6 +33,16 @@ app.post("/api/count", async (req, res) => {
   });
 });
 
+app.get("/api/invitation", async (req, res) => {
+  const result = await TeaInvitation.findAll({
+    order: [["createdAt", "DESC"]],
+    limit: 10,
+  });
+  res.send({
+    code: 0,
+    data: result,
+  });
+});
 // 获取计数
 app.get("/api/count", async (req, res) => {
   const result = await Counter.count();
