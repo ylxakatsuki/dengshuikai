@@ -153,7 +153,7 @@ app.get("/api/product", async (req, res) => {
         {
           "name": "虎啸岩肉桂",
           "type": "1",
-          "price": 378.00
+          "price": 688.00
         },
         {
           "name": "正岩水仙",
